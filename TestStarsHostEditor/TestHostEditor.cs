@@ -27,5 +27,29 @@ namespace TestStarsHostEditor
                 }
             }
         }
+
+        [Fact]
+        public void TestIndexOutOfRange()
+        {
+            var editor = new AtlantisSoftware.StarsHostEditor();
+            editor.Load("TestFiles\\IndexOutOfRange\\GAME.hst");
+            foreach (var planetObj in editor.Planets())
+            {
+                if (planetObj is AtlantisSoftware.Planet planet)
+                {
+                    if (planet.OwnerID == 0)
+                    {
+                        switch (planet.PlanetID)
+                        {
+                            case 10:
+                                Assert.Equal("Lopsided", planet.Name);
+                                Assert.Equal(175, planet.Population);
+                                break;
+                        }
+                        
+                    }
+                }
+            }
+        }
     }    
 }

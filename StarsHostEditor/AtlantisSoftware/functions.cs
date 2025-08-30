@@ -17,7 +17,14 @@ internal sealed class functions
 			int num3 = Start;
 			for (int i = num2; i >= num3; i += -1)
 			{
-				num = num * 256 + Data[i];
+				if (i >= Data.Length)
+				{
+                    num = num * 256;
+                }
+				else
+				{
+					num = num * 256 + Data[i];
+				}
 			}
 			Start += Length;
 			return num;
