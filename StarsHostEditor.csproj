@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{7CB8B845-6E4E-40FD-91A7-DFC7E5B8A9C0}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <LangVersion>12.0</LangVersion>
+    <AssemblyName>StarsHostEditor</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationIcon Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtlantisSoftware.My.Resources\Resources.cs" />
+    <Compile Include="AtlantisSoftware.My\MyApplication.cs" />
+    <Compile Include="AtlantisSoftware.My\MyComputer.cs" />
+    <Compile Include="AtlantisSoftware.My\MyProject.cs" />
+    <Compile Include="AtlantisSoftware.My\MySettings.cs" />
+    <Compile Include="AtlantisSoftware.My\MySettingsProperty.cs" />
+    <Compile Include="AtlantisSoftware\Decryptor.cs" />
+    <Compile Include="AtlantisSoftware\Fleet.cs" />
+    <Compile Include="AtlantisSoftware\functions.cs" />
+    <Compile Include="AtlantisSoftware\Planet.cs" />
+    <Compile Include="AtlantisSoftware\PlanetNamesClass.cs" />
+    <Compile Include="AtlantisSoftware\Race.cs" />
+    <Compile Include="AtlantisSoftware\Ships.cs" />
+    <Compile Include="AtlantisSoftware\StarsHostEditor.cs" />
+    <Compile Include="AtlantisSoftware\Waypoint.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
